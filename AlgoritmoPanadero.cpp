@@ -24,8 +24,10 @@ void panadero(int id) {
     //recorrido
     for(int j = 0;j<N;j++){
         if(j==id)continue;
+        while(eligiendo[j]){
+            this_thread::yield();
+        }
     }
-
 }
 
 

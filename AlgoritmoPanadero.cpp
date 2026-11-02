@@ -21,6 +21,19 @@ void panadero(int id) {
     numero[id] = maximo + 1; 
     eligiendo [id] = false; 
 
+<<<<<<< HEAD
+=======
+    //recorrido
+    for(int j = 0;j<N;j++){
+        if(j==id)continue;
+        while(eligiendo[j]){
+            this_thread::yield();
+        }
+        while(numero[j] != 0 && (numero[j] < numero[id]|| (numero[j] == numero[id] && j < id))){
+            this_thread::yield();
+        }
+    }
+>>>>>>> origin/carlos
 }
 
 

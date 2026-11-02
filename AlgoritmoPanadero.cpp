@@ -21,9 +21,6 @@ void panadero(int id) {
     numero[id] = maximo + 1; 
     eligiendo [id] = false; 
 
-<<<<<<< HEAD
-=======
-    //recorrido
     for(int j = 0;j<N;j++){
         if(j==id)continue;
         while(eligiendo[j]){
@@ -33,7 +30,17 @@ void panadero(int id) {
             this_thread::yield();
         }
     }
->>>>>>> origin/carlos
+    cout << "Proceso " << id + 1
+         << " entra a la seccion critica." << endl;
+
+    this_thread::sleep_for(
+        chrono::milliseconds(500)
+    );
+
+    cout << "Proceso " << id + 1
+         << " sale de la seccion critica." << endl;
+
+    numero[id] = 0;
 }
 
 

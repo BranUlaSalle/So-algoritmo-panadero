@@ -10,6 +10,9 @@ atomic<bool> eligiendo[N];
 atomic<int> numero[N]; 
 
 void panadero(int id) {
+    eligiendo[id] = true; 
+
+    int maximo = 0; 
 }
 
 int main() {

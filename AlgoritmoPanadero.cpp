@@ -13,10 +13,16 @@ void panadero(int id) {
     eligiendo[id] = true; 
 
     int maximo = 0; 
+    for (int i = 0; i < N; i++) { 
+        if (numero[i] > maximo)
+            maximo = numero[i];
+    } 
 
-     numero[id] = maximo + 1; 
+    numero[id] = maximo + 1; 
     eligiendo [id] = false; 
+
 }
+
 
 int main() {
     for (int i = 0; i < N; i++) {

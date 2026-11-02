@@ -27,7 +27,7 @@ void panadero(int id) {
         while(eligiendo[j]){
             this_thread::yield();
         }
-        while(numero[j] != 0 && (numero[j]> numero[id]|| (numero[j] == numero[id] && j < id))){
+        while(numero[j] != 0 && (numero[j] < numero[id]|| (numero[j] == numero[id] && j < id))){
             this_thread::yield();
         }
     }

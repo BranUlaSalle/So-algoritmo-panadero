@@ -13,6 +13,9 @@ void panadero(int id) {
     eligiendo[id] = true; 
 
     int maximo = 0; 
+
+     numero[id] = maximo + 1; 
+    eligiendo [id] = false; 
 }
 
 int main() {
